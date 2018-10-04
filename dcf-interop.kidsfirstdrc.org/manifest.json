@@ -11,34 +11,31 @@
     "arranger": "quay.io/cdis/arranger:master",
     "arranger-dashboard": "quay.io/cdis/arranger-dashboard:master",
     "arranger-adminapi": "quay.io/cdis/arranger-server:master",
-    "fence": "quay.io/cdis/fence:master",
+    "fence": "quay.io/cdis/fence:chore_authlib",
     "indexd": "quay.io/cdis/indexd:master",
     "peregrine": "quay.io/cdis/peregrine:master",
     "pidgin": "quay.io/cdis/pidgin:master",
     "revproxy": "nginx:1.13.9-perl",
     "sheepdog": "quay.io/cdis/sheepdog:master",
-    "portal": "quay.io/cdis/data-portal:master",
+    "portal": "quay.io/cdis/data-portal:fix_kf-config",
     "fluentd": "fluent/fluentd-kubernetes-daemonset:cloudwatch",
     "jupyterhub": "quay.io/occ_data/jupyterhub:master",
     "spark": "quay.io/cdis/gen3-spark:master",
-    "tube": "quay.io/cdis/tube:master"
+    "tube": "quay.io/cdis/tube:feat_object_props"
   },
   "jupyterhub": {
     "enabled": "yes"
   },
   "arranger": {
-    "project_id": "kidsfirst",
+    "project_id": "kidsfirst_1",
     "auth_filter_field": "auth_resource_path",
-    "auth_filter_node_type": "participant"
-  },
-  "tube": {
-    "es_index_name": "kidsfirst_0"
+    "auth_filter_node_type": "case"
   },
   "global": {
     "environment": "kfqa",
     "hostname": "dcf-interop.kidsfirstdrc.org",
     "revproxy_arn": "arn:aws:acm:us-east-1:222487244010:certificate/1d90c400-8210-4443-ac79-4a6f2535e464",
-    "dictionary_url": "http://s3.amazonaws.com/dictionary-artifacts/kf-dictionary/1.0.10/schema.json",
+    "dictionary_url": "http://s3.amazonaws.com/dictionary-artifacts/kf-dictionary/develop/schema.json",
     "portal_app": "kfDcfInterop",
     "kube_bucket": "kube-kfqa-gen3",
     "logs_bucket": "logs-kfqa-gen3",
